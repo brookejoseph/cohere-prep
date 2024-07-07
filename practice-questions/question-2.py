@@ -1,17 +1,26 @@
-#struct defining a job 
+#definition of a job
 class Job:
-    def __initit__(self, name):
+    def __init__(self, name, runtime, status):
         self.name = name
-        self.time = 0
-        self.status = "Not Started"
+        self.runtime = runtime
+        self.status = status
 
 
 
-#struct for benchmarking 
-class benchmark:
-    def  __initit__(self, Job):
-        self.job = Job
-        self.time = 0
-        self.status = "Not Started"
-        self.result = "Not Available"
+# defining a benchmark class 
+class Benchmark(Job):
+    def __init__(self):
+        self.jobs = []
+
+    def add_job(self):
+        self.jobs.append(Job)
+        return True
+    
+    def remove_job(self):
+        self.jobs.pop()
+        return True
+
+
+        
+
 
